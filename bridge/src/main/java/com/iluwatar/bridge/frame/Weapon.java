@@ -21,16 +21,18 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.bridge;
+package com.iluwatar.bridge.frame;
 
 /**
- * Enchantment.
+ * Weapon.
  */
-public interface Enchantment {
+public interface Weapon {
 
-  void onActivate();
+  void wield();
 
-  void apply();
+  void swing();
 
-  void onDeactivate();
+  void unwield();
+
+  Enchantment getEnchantment();
 }

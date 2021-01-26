@@ -21,44 +21,31 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.bridge;
+package com.iluwatar.bridge.impl.enchantment;
 
+import com.iluwatar.bridge.frame.Enchantment;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * Sword.
+ * SoulEatingEnchantment.
  */
-public class Sword implements Weapon {
+public class SoulEatingEnchantment implements Enchantment {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(Sword.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(SoulEatingEnchantment.class);
 
-  private final Enchantment enchantment;
-
-  public Sword(Enchantment enchantment) {
-    this.enchantment = enchantment;
+  @Override
+  public void onActivate() {
+    LOGGER.info("The item spreads bloodlust.");
   }
 
   @Override
-  public void wield() {
-    LOGGER.info("The sword is wielded.");
-    enchantment.onActivate();
+  public void apply() {
+    LOGGER.info("The item eats the soul of enemies.");
   }
 
   @Override
-  public void swing() {
-    LOGGER.info("The sword is swinged.");
-    enchantment.apply();
-  }
-
-  @Override
-  public void unwield() {
-    LOGGER.info("The sword is unwielded.");
-    enchantment.onDeactivate();
-  }
-
-  @Override
-  public Enchantment getEnchantment() {
-    return enchantment;
+  public void onDeactivate() {
+    LOGGER.info("Bloodlust slowly disappears.");
   }
 }

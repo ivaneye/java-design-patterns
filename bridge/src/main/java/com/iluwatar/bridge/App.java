@@ -23,6 +23,12 @@
 
 package com.iluwatar.bridge;
 
+import com.iluwatar.bridge.frame.Enchantment;
+import com.iluwatar.bridge.frame.Weapon;
+import com.iluwatar.bridge.impl.enchantment.FlyingEnchantment;
+import com.iluwatar.bridge.impl.enchantment.SoulEatingEnchantment;
+import com.iluwatar.bridge.impl.weapon.Hammer;
+import com.iluwatar.bridge.impl.weapon.Sword;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

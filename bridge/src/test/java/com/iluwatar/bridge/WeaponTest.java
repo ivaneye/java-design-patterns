@@ -23,6 +23,8 @@
 
 package com.iluwatar.bridge;
 
+import com.iluwatar.bridge.frame.Weapon;
+
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoMoreInteractions;

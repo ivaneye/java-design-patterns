@@ -26,6 +26,8 @@ package com.iluwatar.bridge;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.spy;
 
+import com.iluwatar.bridge.impl.enchantment.FlyingEnchantment;
+import com.iluwatar.bridge.impl.weapon.Hammer;
 import org.junit.jupiter.api.Test;
 
 /**

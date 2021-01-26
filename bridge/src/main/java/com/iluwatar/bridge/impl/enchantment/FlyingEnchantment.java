@@ -21,18 +21,31 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.bridge;
+package com.iluwatar.bridge.impl.enchantment;
+
+import com.iluwatar.bridge.frame.Enchantment;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- * Weapon.
+ * FlyingEnchantment.
  */
-public interface Weapon {
+public class FlyingEnchantment implements Enchantment {
 
-  void wield();
+  private static final Logger LOGGER = LoggerFactory.getLogger(FlyingEnchantment.class);
 
-  void swing();
+  @Override
+  public void onActivate() {
+    LOGGER.info("The item begins to glow faintly.");
+  }
 
-  void unwield();
+  @Override
+  public void apply() {
+    LOGGER.info("The item flies and strikes the enemies finally returning to owner's hand.");
+  }
 
-  Enchantment getEnchantment();
+  @Override
+  public void onDeactivate() {
+    LOGGER.info("The item's glow fades.");
+  }
 }
