@@ -21,32 +21,26 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.facade;
+package com.iluwatar.facade.impl;
 
-import com.iluwatar.facade.facade.DwarvenGoldmineFacade;
+import com.iluwatar.facade.frame.DwarvenMineWorker;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- * The Facade design pattern is often used when a system is very complex or difficult to understand
- * because the system has a large number of interdependent classes or its source code is
- * unavailable. This pattern hides the complexities of the larger system and provides a simpler
- * interface to the client. It typically involves a single wrapper class which contains a set of
- * members required by client. These members access the system on behalf of the facade client and
- * hide the implementation details.
- *
- * <p>In this example the Facade is ({@link DwarvenGoldmineFacade}) and it provides a simpler
- * interface to the goldmine subsystem.
+ * DwarvenTunnelDigger is one of the goldmine subsystems.
  */
-public class App {
+public class DwarvenTunnelDigger extends DwarvenMineWorker {
 
-  /**
-   * Program entry point.
-   *
-   * @param args command line args
-   */
-  public static void main(String[] args) {
-    var facade = new DwarvenGoldmineFacade();
-    facade.startNewDay();
-    facade.digOutGold();
-    facade.endDay();
+  private static final Logger LOGGER = LoggerFactory.getLogger(DwarvenTunnelDigger.class);
+
+  @Override
+  public void work() {
+    LOGGER.info("{} creates another promising tunnel.", name());
+  }
+
+  @Override
+  public String name() {
+    return "Dwarven tunnel digger";
   }
 }

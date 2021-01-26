@@ -31,6 +31,8 @@ import ch.qos.logback.classic.spi.ILoggingEvent;
 import ch.qos.logback.core.AppenderBase;
 import java.util.LinkedList;
 import java.util.List;
+
+import com.iluwatar.facade.facade.DwarvenGoldmineFacade;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
