@@ -26,6 +26,8 @@ package com.iluwatar.interpreter;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.stream.Stream;
+
+import com.iluwatar.interpreter.impl.NumberExpression;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;

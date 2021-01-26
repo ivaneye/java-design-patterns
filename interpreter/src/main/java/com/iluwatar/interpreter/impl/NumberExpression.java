@@ -21,28 +21,32 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.interpreter;
+package com.iluwatar.interpreter.impl;
+
+import com.iluwatar.interpreter.frame.Expression;
 
 /**
- * PlusExpression.
+ * NumberExpression.
  */
-public class PlusExpression extends Expression {
+public class NumberExpression extends Expression {
 
-  private final Expression leftExpression;
-  private final Expression rightExpression;
+  private final int number;
 
-  public PlusExpression(Expression leftExpression, Expression rightExpression) {
-    this.leftExpression = leftExpression;
-    this.rightExpression = rightExpression;
+  public NumberExpression(int number) {
+    this.number = number;
+  }
+
+  public NumberExpression(String s) {
+    this.number = Integer.parseInt(s);
   }
 
   @Override
   public int interpret() {
-    return leftExpression.interpret() + rightExpression.interpret();
+    return number;
   }
 
   @Override
   public String toString() {
-    return "+";
+    return "number";
   }
 }

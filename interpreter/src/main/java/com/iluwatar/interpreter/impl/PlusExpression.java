@@ -21,15 +21,30 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.interpreter;
+package com.iluwatar.interpreter.impl;
+
+import com.iluwatar.interpreter.frame.Expression;
 
 /**
- * Expression.
+ * PlusExpression.
  */
-public abstract class Expression {
+public class PlusExpression extends Expression {
 
-  public abstract int interpret();
+  private final Expression leftExpression;
+  private final Expression rightExpression;
+
+  public PlusExpression(Expression leftExpression, Expression rightExpression) {
+    this.leftExpression = leftExpression;
+    this.rightExpression = rightExpression;
+  }
 
   @Override
-  public abstract String toString();
+  public int interpret() {
+    return leftExpression.interpret() + rightExpression.interpret();
+  }
+
+  @Override
+  public String toString() {
+    return "+";
+  }
 }

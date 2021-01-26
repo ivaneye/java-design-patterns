@@ -21,7 +21,9 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.interpreter;
+package com.iluwatar.interpreter.impl;
+
+import com.iluwatar.interpreter.frame.Expression;
 
 /**
  * MinusExpression.

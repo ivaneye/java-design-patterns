@@ -21,30 +21,15 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.interpreter;
+package com.iluwatar.interpreter.frame;
 
 /**
- * NumberExpression.
+ * Expression.
  */
-public class NumberExpression extends Expression {
+public abstract class Expression {
 
-  private final int number;
-
-  public NumberExpression(int number) {
-    this.number = number;
-  }
-
-  public NumberExpression(String s) {
-    this.number = Integer.parseInt(s);
-  }
+  public abstract int interpret();
 
   @Override
-  public int interpret() {
-    return number;
-  }
-
-  @Override
-  public String toString() {
-    return "number";
-  }
+  public abstract String toString();
 }

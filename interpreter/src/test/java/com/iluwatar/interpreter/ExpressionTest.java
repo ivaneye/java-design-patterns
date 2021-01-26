@@ -30,6 +30,9 @@ import java.util.ArrayList;
 import java.util.function.BiFunction;
 import java.util.function.IntBinaryOperator;
 import java.util.stream.Stream;
+
+import com.iluwatar.interpreter.frame.Expression;
+import com.iluwatar.interpreter.impl.NumberExpression;
 import org.junit.jupiter.api.TestInstance;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;

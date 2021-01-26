@@ -24,6 +24,8 @@
 package com.iluwatar.interpreter;
 
 import java.util.stream.Stream;
+
+import com.iluwatar.interpreter.impl.MultiplyExpression;
 import org.junit.jupiter.params.provider.Arguments;
 
 /**

@@ -24,6 +24,12 @@
 package com.iluwatar.interpreter;
 
 import java.util.Stack;
+
+import com.iluwatar.interpreter.frame.Expression;
+import com.iluwatar.interpreter.impl.MinusExpression;
+import com.iluwatar.interpreter.impl.MultiplyExpression;
+import com.iluwatar.interpreter.impl.NumberExpression;
+import com.iluwatar.interpreter.impl.PlusExpression;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
