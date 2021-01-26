@@ -23,6 +23,12 @@
 
 package com.iluwatar.strategy;
 
+import com.iluwatar.strategy.frame.DragonSlayer;
+import com.iluwatar.strategy.frame.DragonSlayingStrategy;
+import com.iluwatar.strategy.impl.LambdaStrategy;
+import com.iluwatar.strategy.impl.MeleeStrategy;
+import com.iluwatar.strategy.impl.ProjectileStrategy;
+import com.iluwatar.strategy.impl.SpellStrategy;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

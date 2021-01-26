@@ -27,6 +27,8 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoMoreInteractions;
 
+import com.iluwatar.strategy.frame.DragonSlayer;
+import com.iluwatar.strategy.frame.DragonSlayingStrategy;
 import org.junit.jupiter.api.Test;
 
 /**

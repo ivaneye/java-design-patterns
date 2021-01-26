@@ -31,6 +31,11 @@ import ch.qos.logback.core.AppenderBase;
 import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
+
+import com.iluwatar.strategy.frame.DragonSlayingStrategy;
+import com.iluwatar.strategy.impl.MeleeStrategy;
+import com.iluwatar.strategy.impl.ProjectileStrategy;
+import com.iluwatar.strategy.impl.SpellStrategy;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
