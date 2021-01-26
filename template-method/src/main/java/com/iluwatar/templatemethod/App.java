@@ -23,6 +23,11 @@
 
 package com.iluwatar.templatemethod;
 
+import com.iluwatar.templatemethod.frame.HalflingThief;
+import com.iluwatar.templatemethod.frame.StealingMethod;
+import com.iluwatar.templatemethod.impl.HitAndRunMethod;
+import com.iluwatar.templatemethod.impl.SubtleMethod;
+
 /**
  * Template Method defines a skeleton for an algorithm. The algorithm subclasses provide
  * implementation for the blank parts.

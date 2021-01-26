@@ -21,8 +21,9 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.templatemethod;
+package com.iluwatar.templatemethod.impl;
 
+import com.iluwatar.templatemethod.frame.StealingMethod;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

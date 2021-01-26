@@ -23,6 +23,8 @@
 
 package com.iluwatar.templatemethod;
 
+import com.iluwatar.templatemethod.impl.HitAndRunMethod;
+
 /**
  * Date: 12/30/15 - 18:12 PM
  *

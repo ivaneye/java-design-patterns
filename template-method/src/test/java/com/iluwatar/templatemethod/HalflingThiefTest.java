@@ -27,6 +27,8 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoMoreInteractions;
 
+import com.iluwatar.templatemethod.frame.HalflingThief;
+import com.iluwatar.templatemethod.frame.StealingMethod;
 import org.junit.jupiter.api.Test;
 
 /**

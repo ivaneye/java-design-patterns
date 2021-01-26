@@ -21,7 +21,7 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.templatemethod;
+package com.iluwatar.templatemethod.frame;
 
 /**
  * Halfling thief uses {@link StealingMethod} to steal.

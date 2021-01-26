@@ -21,28 +21,31 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.templatemethod;
+package com.iluwatar.templatemethod.impl;
 
-import com.iluwatar.templatemethod.impl.SubtleMethod;
+import com.iluwatar.templatemethod.frame.StealingMethod;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- * Date: 12/30/15 - 18:19 PM
- *
- * @author Jeroen Meulemeester
+ * SubtleMethod implementation of {@link StealingMethod}.
  */
-public class SubtleMethodTest extends StealingMethodTest<SubtleMethod> {
+public class SubtleMethod extends StealingMethod {
 
-  /**
-   * Create a new test for the {@link SubtleMethod}
-   */
-  public SubtleMethodTest() {
-    super(
-        new SubtleMethod(),
-        "shop keeper",
-        "The target has been chosen as shop keeper.",
-        "Approach the shop keeper with tears running and hug him!",
-        "While in close contact grab the shop keeper's wallet."
-    );
+  private static final Logger LOGGER = LoggerFactory.getLogger(SubtleMethod.class);
+
+  @Override
+  protected String pickTarget() {
+    return "shop keeper";
   }
 
+  @Override
+  protected void confuseTarget(String target) {
+    LOGGER.info("Approach the {} with tears running and hug him!", target);
+  }
+
+  @Override
+  protected void stealTheItem(String target) {
+    LOGGER.info("While in close contact grab the {}'s wallet.", target);
+  }
 }
