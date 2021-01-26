@@ -21,20 +21,13 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.observer;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+package com.iluwatar.observer.frame;
 
 /**
- * Hobbits.
+ * Observer interface.
  */
-public class Hobbits implements WeatherObserver {
+public interface WeatherObserver {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(Hobbits.class);
+  void update(WeatherType currentWeather);
 
-  @Override
-  public void update(WeatherType currentWeather) {
-    LOGGER.info("The hobbits are facing " + currentWeather.getDescription() + " weather now");
-  }
 }

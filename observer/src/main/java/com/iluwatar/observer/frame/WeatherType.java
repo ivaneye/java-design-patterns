@@ -21,20 +21,30 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.observer;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+package com.iluwatar.observer.frame;
 
 /**
- * Orcs.
+ * WeatherType enumeration.
  */
-public class Orcs implements WeatherObserver {
+public enum WeatherType {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(Orcs.class);
+  SUNNY("Sunny"),
+  RAINY("Rainy"),
+  WINDY("Windy"),
+  COLD("Cold");
+
+  private final String description;
+
+  WeatherType(String description) {
+    this.description = description;
+  }
+
+  public String getDescription() {
+    return this.description;
+  }
 
   @Override
-  public void update(WeatherType currentWeather) {
-    LOGGER.info("The orcs are facing " + currentWeather.getDescription() + " weather now");
+  public String toString() {
+    return this.name().toLowerCase();
   }
 }

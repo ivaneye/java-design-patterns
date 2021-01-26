@@ -21,16 +21,22 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.observer.generic;
+package com.iluwatar.observer.impl;
+
+import com.iluwatar.observer.frame.WeatherObserver;
+import com.iluwatar.observer.frame.WeatherType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- * Observer.
- *
- * @param <S> Observable
- * @param <O> Observer
- * @param <A> Action
+ * Orcs.
  */
-public interface Observer<S extends Observable<S, O, A>, O extends Observer<S, O, A>, A> {
+public class Orcs implements WeatherObserver {
 
-  void update(S subject, A argument);
+  private static final Logger LOGGER = LoggerFactory.getLogger(Orcs.class);
+
+  @Override
+  public void update(WeatherType currentWeather) {
+    LOGGER.info("The orcs are facing " + currentWeather.getDescription() + " weather now");
+  }
 }

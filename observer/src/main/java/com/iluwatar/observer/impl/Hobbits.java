@@ -21,21 +21,22 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.observer.generic;
+package com.iluwatar.observer.impl;
 
-import com.iluwatar.observer.WeatherType;
+import com.iluwatar.observer.frame.WeatherObserver;
+import com.iluwatar.observer.frame.WeatherType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * GHobbits.
+ * Hobbits.
  */
-public class GHobbits implements Race {
+public class Hobbits implements WeatherObserver {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(GHobbits.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(Hobbits.class);
 
   @Override
-  public void update(GWeather weather, WeatherType weatherType) {
-    LOGGER.info("The hobbits are facing " + weatherType.getDescription() + " weather now");
+  public void update(WeatherType currentWeather) {
+    LOGGER.info("The hobbits are facing " + currentWeather.getDescription() + " weather now");
   }
 }

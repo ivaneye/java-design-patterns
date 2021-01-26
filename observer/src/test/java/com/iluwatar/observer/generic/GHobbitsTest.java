@@ -23,7 +23,7 @@
 
 package com.iluwatar.observer.generic;
 
-import com.iluwatar.observer.WeatherType;
+import com.iluwatar.observer.frame.WeatherType;
 
 import java.util.Collection;
 import java.util.List;

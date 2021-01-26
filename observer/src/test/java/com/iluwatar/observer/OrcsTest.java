@@ -23,6 +23,9 @@
 
 package com.iluwatar.observer;
 
+import com.iluwatar.observer.frame.WeatherType;
+import com.iluwatar.observer.impl.Orcs;
+
 import java.util.Collection;
 import java.util.List;
 

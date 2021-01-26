@@ -23,9 +23,12 @@
 
 package com.iluwatar.observer;
 
+import com.iluwatar.observer.frame.Weather;
 import com.iluwatar.observer.generic.GHobbits;
 import com.iluwatar.observer.generic.GOrcs;
 import com.iluwatar.observer.generic.GWeather;
+import com.iluwatar.observer.impl.Hobbits;
+import com.iluwatar.observer.impl.Orcs;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

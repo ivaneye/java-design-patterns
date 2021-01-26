@@ -23,11 +23,13 @@
 
 package com.iluwatar.observer;
 
+import com.iluwatar.observer.frame.Weather;
+import com.iluwatar.observer.frame.WeatherObserver;
+import com.iluwatar.observer.frame.WeatherType;
 import com.iluwatar.observer.utils.InMemoryAppender;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.InOrder;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.inOrder;

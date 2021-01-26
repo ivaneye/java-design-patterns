@@ -21,7 +21,7 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.observer;
+package com.iluwatar.observer.frame;
 
 import java.util.ArrayList;
 import java.util.List;
