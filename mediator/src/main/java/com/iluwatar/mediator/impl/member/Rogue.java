@@ -21,16 +21,16 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.mediator;
+package com.iluwatar.mediator.impl.member;
 
 /**
- * Interface for party members interacting with {@link Party}.
+ * Rogue party member.
  */
-public interface PartyMember {
+public class Rogue extends PartyMemberBase {
 
-  void joinedParty(Party party);
+  @Override
+  public String toString() {
+    return "Rogue";
+  }
 
-  void partyAction(Action action);
-
-  void act(Action action);
 }

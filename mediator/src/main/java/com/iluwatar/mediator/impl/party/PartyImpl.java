@@ -21,46 +21,38 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.mediator;
+package com.iluwatar.mediator.impl.party;
 
 import com.iluwatar.mediator.frame.Action;
+import com.iluwatar.mediator.frame.Party;
 import com.iluwatar.mediator.frame.PartyMember;
-import com.iluwatar.mediator.impl.party.PartyImpl;
-import org.junit.jupiter.api.Test;
 
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.verifyNoMoreInteractions;
-import static org.mockito.Mockito.verifyZeroInteractions;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * Date: 12/19/15 - 10:00 PM
- *
- * @author Jeroen Meulemeester
+ * Party implementation.
  */
-public class PartyImplTest {
+public class PartyImpl implements Party {
 
-  /**
-   * Verify if a member is notified when it's joining a party. Generate an action and see if the
-   * other member gets it. Also check members don't get their own actions.
-   */
-  @Test
-  public void testPartyAction() {
-    final var partyMember1 = mock(PartyMember.class);
-    final var partyMember2 = mock(PartyMember.class);
+  private final List<PartyMember> members;
 
-    final var party = new PartyImpl();
-    party.addMember(partyMember1);
-    party.addMember(partyMember2);
-
-    verify(partyMember1).joinedParty(party);
-    verify(partyMember2).joinedParty(party);
-
-    party.act(partyMember1, Action.GOLD);
-    verifyZeroInteractions(partyMember1);
-    verify(partyMember2).partyAction(Action.GOLD);
-
-    verifyNoMoreInteractions(partyMember1, partyMember2);
+  public PartyImpl() {
+    members = new ArrayList<>();
   }
 
+  @Override
+  public void act(PartyMember actor, Action action) {
+    for (var member : members) {
+      if (!member.equals(actor)) {
+        member.partyAction(action);
+      }
+    }
+  }
+
+  @Override
+  public void addMember(PartyMember member) {
+    members.add(member);
+    member.joinedParty(this);
+  }
 }

@@ -21,46 +21,43 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.mediator;
+package com.iluwatar.mediator.impl.member;
 
 import com.iluwatar.mediator.frame.Action;
+import com.iluwatar.mediator.frame.Party;
 import com.iluwatar.mediator.frame.PartyMember;
-import com.iluwatar.mediator.impl.party.PartyImpl;
-import org.junit.jupiter.api.Test;
-
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
-import static org.mockito.Mockito.verifyNoMoreInteractions;
-import static org.mockito.Mockito.verifyZeroInteractions;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- * Date: 12/19/15 - 10:00 PM
- *
- * @author Jeroen Meulemeester
+ * Abstract base class for party members.
  */
-public class PartyImplTest {
+public abstract class PartyMemberBase implements PartyMember {
 
-  /**
-   * Verify if a member is notified when it's joining a party. Generate an action and see if the
-   * other member gets it. Also check members don't get their own actions.
-   */
-  @Test
-  public void testPartyAction() {
-    final var partyMember1 = mock(PartyMember.class);
-    final var partyMember2 = mock(PartyMember.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(PartyMemberBase.class);
 
-    final var party = new PartyImpl();
-    party.addMember(partyMember1);
-    party.addMember(partyMember2);
+  protected Party party;
 
-    verify(partyMember1).joinedParty(party);
-    verify(partyMember2).joinedParty(party);
-
-    party.act(partyMember1, Action.GOLD);
-    verifyZeroInteractions(partyMember1);
-    verify(partyMember2).partyAction(Action.GOLD);
-
-    verifyNoMoreInteractions(partyMember1, partyMember2);
+  @Override
+  public void joinedParty(Party party) {
+    LOGGER.info("{} joins the party", this);
+    this.party = party;
   }
+
+  @Override
+  public void partyAction(Action action) {
+    LOGGER.info("{} {}", this, action.getDescription());
+  }
+
+  @Override
+  public void act(Action action) {
+    if (party != null) {
+      LOGGER.info("{} {}", this, action);
+      party.act(this, action);
+    }
+  }
+
+  @Override
+  public abstract String toString();
 
 }

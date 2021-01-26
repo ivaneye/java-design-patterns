@@ -21,7 +21,7 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.mediator;
+package com.iluwatar.mediator.frame;
 
 /**
  * Action enumeration.

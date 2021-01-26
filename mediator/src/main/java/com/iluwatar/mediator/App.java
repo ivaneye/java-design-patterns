@@ -23,6 +23,15 @@
 
 package com.iluwatar.mediator;
 
+import com.iluwatar.mediator.frame.Action;
+import com.iluwatar.mediator.frame.Party;
+import com.iluwatar.mediator.frame.PartyMember;
+import com.iluwatar.mediator.impl.member.Hobbit;
+import com.iluwatar.mediator.impl.member.Hunter;
+import com.iluwatar.mediator.impl.member.Rogue;
+import com.iluwatar.mediator.impl.member.Wizard;
+import com.iluwatar.mediator.impl.party.PartyImpl;
+
 /**
  * The Mediator pattern defines an object that encapsulates how a set of objects interact. This
  * pattern is considered to be a behavioral pattern due to the way it can alter the program's

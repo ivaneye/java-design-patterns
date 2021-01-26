@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.1.8" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
   realizations="true" associations="true" dependencies="false" nesting-relationships="true">  
-  <interface id="1" language="java" name="com.iluwatar.mediator.Party" project="mediator" 
+  <interface id="1" language="java" name="com.iluwatar.mediator.frame.Party" project="mediator"
     file="/mediator/src/main/java/com/iluwatar/mediator/Party.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="106" width="206" x="867" y="467"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -10,7 +10,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="2" language="java" name="com.iluwatar.mediator.Rogue" project="mediator" 
+  <class id="2" language="java" name="com.iluwatar.mediator.impl.member.Rogue" project="mediator"
     file="/mediator/src/main/java/com/iluwatar/mediator/Rogue.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="106" width="131" x="-20" y="467"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -19,7 +19,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <enumeration id="3" language="java" name="com.iluwatar.mediator.Action" project="mediator" 
+  <enumeration id="3" language="java" name="com.iluwatar.mediator.frame.Action" project="mediator"
     file="/mediator/src/main/java/com/iluwatar/mediator/Action.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="250" width="155" x="99" y="177"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -28,7 +28,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </enumeration>  
-  <class id="4" language="java" name="com.iluwatar.mediator.Hobbit" project="mediator" 
+  <class id="4" language="java" name="com.iluwatar.mediator.impl.member.Hobbit" project="mediator"
     file="/mediator/src/main/java/com/iluwatar/mediator/Hobbit.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="106" width="131" x="151" y="467"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -37,7 +37,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <interface id="5" language="java" name="com.iluwatar.mediator.PartyMember" project="mediator" 
+  <interface id="5" language="java" name="com.iluwatar.mediator.frame.PartyMember" project="mediator"
     file="/mediator/src/main/java/com/iluwatar/mediator/PartyMember.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="124" width="163" x="664" y="467"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -46,7 +46,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </interface>  
-  <class id="6" language="java" name="com.iluwatar.mediator.Wizard" project="mediator" 
+  <class id="6" language="java" name="com.iluwatar.mediator.impl.member.Wizard" project="mediator"
     file="/mediator/src/main/java/com/iluwatar/mediator/Wizard.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="106" width="131" x="322" y="467"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -55,7 +55,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="com.iluwatar.mediator.PartyMemberBase" project="mediator" 
+  <class id="7" language="java" name="com.iluwatar.mediator.impl.member.PartyMemberBase" project="mediator"
     file="/mediator/src/main/java/com/iluwatar/mediator/PartyMemberBase.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="159" width="163" x="413" y="177"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -64,7 +64,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="com.iluwatar.mediator.PartyImpl" project="mediator" 
+  <class id="8" language="java" name="com.iluwatar.mediator.impl.party.PartyImpl" project="mediator"
     file="/mediator/src/main/java/com/iluwatar/mediator/PartyImpl.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="124" width="206" x="765" y="177"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
@@ -73,7 +73,7 @@
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="com.iluwatar.mediator.Hunter" project="mediator" 
+  <class id="9" language="java" name="com.iluwatar.mediator.impl.member.Hunter" project="mediator"
     file="/mediator/src/main/java/com/iluwatar/mediator/Hunter.java" binary="false" corner="BOTTOM_RIGHT">    
     <position height="106" width="131" x="493" y="467"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
