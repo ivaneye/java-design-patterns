@@ -21,25 +21,12 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.abstractfactory;
+package com.iluwatar.abstractfactory.frame;
 
 /**
- * OrcKingdomFactory concrete factory.
+ * Army interface.
  */
-public class OrcKingdomFactory implements KingdomFactory {
+public interface Army {
 
-  @Override
-  public Castle createCastle() {
-    return new OrcCastle();
-  }
-
-  @Override
-  public King createKing() {
-    return new OrcKing();
-  }
-
-  @Override
-  public Army createArmy() {
-    return new OrcArmy();
-  }
+  String getDescription();
 }

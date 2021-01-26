@@ -21,14 +21,16 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.abstractfactory;
+package com.iluwatar.abstractfactory.impl.orc;
+
+import com.iluwatar.abstractfactory.frame.King;
 
 /**
- * OrcArmy.
+ * OrcKing.
  */
-public class OrcArmy implements Army {
+public class OrcKing implements King {
 
-  static final String DESCRIPTION = "This is the Orc Army!";
+  static final String DESCRIPTION = "This is the Orc king!";
 
   @Override
   public String getDescription() {

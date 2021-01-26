@@ -21,17 +21,12 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.abstractfactory;
+package com.iluwatar.abstractfactory.frame;
 
 /**
- * ElfCastle.
+ * Castle interface.
  */
-public class ElfCastle implements Castle {
+public interface Castle {
 
-  static final String DESCRIPTION = "This is the Elven castle!";
-
-  @Override
-  public String getDescription() {
-    return DESCRIPTION;
-  }
+  String getDescription();
 }

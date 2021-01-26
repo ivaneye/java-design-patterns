@@ -21,7 +21,14 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.abstractfactory;
+package com.iluwatar.abstractfactory.impl;
+
+import com.iluwatar.abstractfactory.frame.Army;
+import com.iluwatar.abstractfactory.frame.Castle;
+import com.iluwatar.abstractfactory.frame.King;
+import com.iluwatar.abstractfactory.frame.KingdomFactory;
+import com.iluwatar.abstractfactory.impl.elf.ElfKingdomFactory;
+import com.iluwatar.abstractfactory.impl.orc.OrcKingdomFactory;
 
 public class Kingdom {
 

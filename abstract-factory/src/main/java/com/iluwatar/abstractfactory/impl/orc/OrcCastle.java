@@ -21,7 +21,9 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.abstractfactory;
+package com.iluwatar.abstractfactory.impl.orc;
+
+import com.iluwatar.abstractfactory.frame.Castle;
 
 /**
  * OrcCastle.

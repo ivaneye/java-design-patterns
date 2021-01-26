@@ -21,26 +21,19 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.abstractfactory;
+package com.iluwatar.abstractfactory.impl.elf;
+
+import com.iluwatar.abstractfactory.frame.Army;
 
 /**
- * ElfKingdomFactory concrete factory.
+ * ElfArmy.
  */
-public class ElfKingdomFactory implements KingdomFactory {
+public class ElfArmy implements Army {
+
+  static final String DESCRIPTION = "This is the Elven Army!";
 
   @Override
-  public Castle createCastle() {
-    return new ElfCastle();
+  public String getDescription() {
+    return DESCRIPTION;
   }
-
-  @Override
-  public King createKing() {
-    return new ElfKing();
-  }
-
-  @Override
-  public Army createArmy() {
-    return new ElfArmy();
-  }
-
 }

@@ -21,12 +21,17 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.abstractfactory;
+package com.iluwatar.abstractfactory.frame;
 
 /**
- * Army interface.
+ * KingdomFactory factory interface.
  */
-public interface Army {
+public interface KingdomFactory {
 
-  String getDescription();
+  Castle createCastle();
+
+  King createKing();
+
+  Army createArmy();
+
 }

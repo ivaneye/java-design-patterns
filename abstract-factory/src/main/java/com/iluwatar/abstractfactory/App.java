@@ -23,6 +23,10 @@
 
 package com.iluwatar.abstractfactory;
 
+import com.iluwatar.abstractfactory.frame.KingdomFactory;
+import com.iluwatar.abstractfactory.impl.elf.ElfKingdomFactory;
+import com.iluwatar.abstractfactory.impl.Kingdom;
+import com.iluwatar.abstractfactory.impl.orc.OrcKingdomFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
