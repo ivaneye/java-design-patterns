@@ -21,7 +21,7 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.command;
+package com.iluwatar.command.real;
 
 /**
  * Enumeration for target visibility.

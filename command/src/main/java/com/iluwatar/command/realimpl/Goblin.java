@@ -21,25 +21,24 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.command;
+package com.iluwatar.command.realimpl;
 
-import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import com.iluwatar.command.real.Size;
+import com.iluwatar.command.real.Target;
+import com.iluwatar.command.real.Visibility;
 
 /**
- * Tests that Command example runs without errors.
+ * Goblin is the target of the spells.
  */
-class AppTest {
-  /**
-   * Issue: Add at least one assertion to this test case.
-   *
-   * Solution: Inserted assertion to check whether the execution of the main method in {@link App#main(String[])}
-   * throws an exception.
-   */
-  @Test
-  void shouldExecuteApplicationWithoutException() {
+public class Goblin extends Target {
 
-    assertDoesNotThrow(() -> App.main(new String[]{}));
+  public Goblin() {
+    setSize(Size.NORMAL);
+    setVisibility(Visibility.VISIBLE);
+  }
+
+  @Override
+  public String toString() {
+    return "Goblin";
   }
 }

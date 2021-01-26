@@ -23,6 +23,10 @@
 
 package com.iluwatar.command;
 
+import com.iluwatar.command.frame.Wizard;
+import com.iluwatar.command.impl.ChangeSizeCommand;
+import com.iluwatar.command.realimpl.Goblin;
+
 /**
  * The Command pattern is a behavioral design pattern in which an object is used to encapsulate all
  * information needed to perform an action or trigger an event at a later time. This information
@@ -52,7 +56,7 @@ public class App {
 
     goblin.printStatus();
 
-    wizard.castSpell(goblin::changeSize);
+    wizard.castSpell(new ChangeSizeCommand(goblin));
     goblin.printStatus();
 
     wizard.castSpell(goblin::changeVisibility);

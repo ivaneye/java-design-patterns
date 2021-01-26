@@ -21,20 +21,23 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.command;
+package com.iluwatar.command.real;
 
 /**
- * Goblin is the target of the spells.
+ * Enumeration for target size.
  */
-public class Goblin extends Target {
+public enum Size {
 
-  public Goblin() {
-    setSize(Size.NORMAL);
-    setVisibility(Visibility.VISIBLE);
+  SMALL("small"), NORMAL("normal");
+
+  private final String title;
+
+  Size(String title) {
+    this.title = title;
   }
 
   @Override
   public String toString() {
-    return "Goblin";
+    return title;
   }
 }

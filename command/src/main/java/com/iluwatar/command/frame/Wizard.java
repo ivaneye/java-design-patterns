@@ -21,23 +21,54 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.command;
+package com.iluwatar.command.frame;
+
+import java.util.Deque;
+import java.util.LinkedList;
 
 /**
- * Enumeration for target size.
+ * Wizard is the invoker of the commands.
  */
-public enum Size {
+public class Wizard {
 
-  SMALL("small"), NORMAL("normal");
+  private final Deque<Command> undoStack = new LinkedList<>();
+  private final Deque<Command> redoStack = new LinkedList<>();
 
-  private final String title;
+  public Wizard() {
+  }
 
-  Size(String title) {
-    this.title = title;
+  /**
+   * Cast spell.
+   */
+  public void castSpell(Command command) {
+    command.exec();
+    undoStack.offerLast(command);
+  }
+
+  /**
+   * Undo last spell.
+   */
+  public void undoLastSpell() {
+    if (!undoStack.isEmpty()) {
+      var previousSpell = undoStack.pollLast();
+      redoStack.offerLast(previousSpell);
+      previousSpell.exec();
+    }
+  }
+
+  /**
+   * Redo last spell.
+   */
+  public void redoLastSpell() {
+    if (!redoStack.isEmpty()) {
+      var previousSpell = redoStack.pollLast();
+      undoStack.offerLast(previousSpell);
+      previousSpell.exec();
+    }
   }
 
   @Override
   public String toString() {
-    return title;
+    return "Wizard";
   }
 }
