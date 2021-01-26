@@ -21,22 +21,25 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.adapter;
+package com.iluwatar.adapter.impl;
 
-import static org.slf4j.LoggerFactory.getLogger;
-
-import org.slf4j.Logger;
+import com.iluwatar.adapter.adaptee.FishingBoat;
+import com.iluwatar.adapter.frame.Captain;
+import com.iluwatar.adapter.frame.RowingBoat;
 
 /**
- * Device class (adaptee in the pattern). We want to reuse this class. Fishing boat moves by
- * sailing.
+ * Adapter class. Adapts the interface of the device ({@link FishingBoat}) into {@link RowingBoat}
+ * interface expected by the client ({@link Captain}).
  */
-final class FishingBoat {
+public class FishingBoatAdapter implements RowingBoat {
 
-  private static final Logger LOGGER = getLogger(FishingBoat.class);
+  private final FishingBoat boat;
 
-  void sail() {
-    LOGGER.info("The fishing boat is sailing");
+  public FishingBoatAdapter() {
+    boat = new FishingBoat();
   }
 
+  public final void row() {
+    boat.sail();
+  }
 }

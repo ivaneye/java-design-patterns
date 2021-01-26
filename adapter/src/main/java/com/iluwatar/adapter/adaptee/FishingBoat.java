@@ -21,27 +21,22 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.adapter;
+package com.iluwatar.adapter.adaptee;
 
-import org.junit.jupiter.api.Test;
+import static org.slf4j.LoggerFactory.getLogger;
 
-import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+import org.slf4j.Logger;
 
 /**
- * Tests that Adapter example runs without errors.
+ * Device class (adaptee in the pattern). We want to reuse this class. Fishing boat moves by
+ * sailing.
  */
-class AppTest {
+public final class FishingBoat {
 
-  /**
-   * Issue: Add at least one assertion to this test case.
-   *
-   * Solution: Inserted assertion to check whether the execution of the main method in {@link App}
-   * throws an exception.
-   */
+  private static final Logger LOGGER = getLogger(FishingBoat.class);
 
-  @Test
-  void shouldExecuteApplicationWithoutException() {
-
-    assertDoesNotThrow(() -> App.main(new String[]{}));
+  public void sail() {
+    LOGGER.info("The fishing boat is sailing");
   }
+
 }

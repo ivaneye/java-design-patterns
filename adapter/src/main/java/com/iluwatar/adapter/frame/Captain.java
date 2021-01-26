@@ -21,21 +21,28 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.adapter;
+package com.iluwatar.adapter.frame;
 
 /**
- * Adapter class. Adapts the interface of the device ({@link FishingBoat}) into {@link RowingBoat}
- * interface expected by the client ({@link Captain}).
+ * The Captain uses {@link RowingBoat} to sail. <br> This is the client in the pattern.
  */
-public class FishingBoatAdapter implements RowingBoat {
+public final class Captain {
 
-  private final FishingBoat boat;
+  private RowingBoat rowingBoat;
 
-  public FishingBoatAdapter() {
-    boat = new FishingBoat();
+  public Captain() {
   }
 
-  public final void row() {
-    boat.sail();
+  public Captain(final RowingBoat boat) {
+    this.rowingBoat = boat;
   }
+
+  void setRowingBoat(final RowingBoat boat) {
+    this.rowingBoat = boat;
+  }
+
+  public void row() {
+    rowingBoat.row();
+  }
+
 }

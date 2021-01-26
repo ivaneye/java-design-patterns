@@ -23,6 +23,11 @@
 
 package com.iluwatar.adapter;
 
+import com.iluwatar.adapter.adaptee.FishingBoat;
+import com.iluwatar.adapter.impl.FishingBoatAdapter;
+import com.iluwatar.adapter.frame.Captain;
+import com.iluwatar.adapter.frame.RowingBoat;
+
 /**
  * An adapter helps two incompatible interfaces to work together. This is the real world definition
  * for an adapter. Interfaces may be incompatible but the inner functionality should suit the need.

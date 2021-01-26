@@ -21,7 +21,7 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.adapter;
+package com.iluwatar.adapter.frame;
 
 /**
  * The interface expected by the client.<br> A rowing boat is rowed to move.
