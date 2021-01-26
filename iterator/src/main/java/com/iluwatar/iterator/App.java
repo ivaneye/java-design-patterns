@@ -23,15 +23,16 @@
 
 package com.iluwatar.iterator;
 
-import static com.iluwatar.iterator.list.ItemType.ANY;
-import static com.iluwatar.iterator.list.ItemType.POTION;
-import static com.iluwatar.iterator.list.ItemType.RING;
-import static com.iluwatar.iterator.list.ItemType.WEAPON;
+import static com.iluwatar.iterator.impl.list.ItemType.ANY;
+import static com.iluwatar.iterator.impl.list.ItemType.POTION;
+import static com.iluwatar.iterator.impl.list.ItemType.RING;
+import static com.iluwatar.iterator.impl.list.ItemType.WEAPON;
 
-import com.iluwatar.iterator.bst.BstIterator;
-import com.iluwatar.iterator.bst.TreeNode;
-import com.iluwatar.iterator.list.ItemType;
-import com.iluwatar.iterator.list.TreasureChest;
+import com.iluwatar.iterator.impl.bst.BstIterator;
+import com.iluwatar.iterator.impl.bst.TreeNode;
+import com.iluwatar.iterator.frame.Iterator;
+import com.iluwatar.iterator.impl.list.ItemType;
+import com.iluwatar.iterator.impl.list.TreasureChest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

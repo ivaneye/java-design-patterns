@@ -21,9 +21,9 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.iterator.bst;
+package com.iluwatar.iterator.impl.bst;
 
-import com.iluwatar.iterator.Iterator;
+import com.iluwatar.iterator.frame.Iterator;
 import java.util.ArrayDeque;
 import java.util.NoSuchElementException;
 

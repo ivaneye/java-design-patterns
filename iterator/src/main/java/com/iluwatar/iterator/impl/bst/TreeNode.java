@@ -21,7 +21,7 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.iterator.bst;
+package com.iluwatar.iterator.impl.bst;
 
 /**
  * TreeNode Class, representing one node in a Binary Search Tree. Allows for a generically typed

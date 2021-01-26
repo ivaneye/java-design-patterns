@@ -21,55 +21,31 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.iterator.list;
-
-import com.iluwatar.iterator.Iterator;
+package com.iluwatar.iterator.impl.list;
 
 /**
- * TreasureChestItemIterator.
+ * Item.
  */
-public class TreasureChestItemIterator implements Iterator<Item> {
+public class Item {
 
-  private final TreasureChest chest;
-  private int idx;
-  private final ItemType type;
+  private ItemType type;
+  private final String name;
 
-  /**
-   * Constructor.
-   */
-  public TreasureChestItemIterator(TreasureChest chest, ItemType type) {
-    this.chest = chest;
+  public Item(ItemType type, String name) {
+    this.setType(type);
+    this.name = name;
+  }
+
+  @Override
+  public String toString() {
+    return name;
+  }
+
+  public ItemType getType() {
+    return type;
+  }
+
+  public final void setType(ItemType type) {
     this.type = type;
-    this.idx = -1;
-  }
-
-  @Override
-  public boolean hasNext() {
-    return findNextIdx() != -1;
-  }
-
-  @Override
-  public Item next() {
-    idx = findNextIdx();
-    if (idx != -1) {
-      return chest.getItems().get(idx);
-    }
-    return null;
-  }
-
-  private int findNextIdx() {
-    var items = chest.getItems();
-    var tempIdx = idx;
-    while (true) {
-      tempIdx++;
-      if (tempIdx >= items.size()) {
-        tempIdx = -1;
-        break;
-      }
-      if (type.equals(ItemType.ANY) || items.get(tempIdx).getType().equals(type)) {
-        break;
-      }
-    }
-    return tempIdx;
   }
 }

@@ -28,6 +28,11 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import java.util.List;
+
+import com.iluwatar.iterator.impl.list.Item;
+import com.iluwatar.iterator.impl.list.ItemType;
+import com.iluwatar.iterator.impl.list.TreasureChest;
+import com.iluwatar.iterator.impl.list.TreasureChestItemIterator;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 

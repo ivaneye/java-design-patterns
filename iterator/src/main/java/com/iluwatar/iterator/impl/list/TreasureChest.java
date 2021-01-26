@@ -21,16 +21,45 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.iterator;
+package com.iluwatar.iterator.impl.list;
+
+import com.iluwatar.iterator.frame.Iterator;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * Iterator interface to be implemented by iterators over various data structures.
- *
- * @param <T> generically typed for various objects
+ * TreasureChest, the collection class.
  */
-public interface Iterator<T> {
+public class TreasureChest {
 
-  boolean hasNext();
+  private final List<Item> items;
 
-  T next();
+  /**
+   * Constructor.
+   */
+  public TreasureChest() {
+    items = List.of(
+        new Item(ItemType.POTION, "Potion of courage"),
+        new Item(ItemType.RING, "Ring of shadows"),
+        new Item(ItemType.POTION, "Potion of wisdom"),
+        new Item(ItemType.POTION, "Potion of blood"),
+        new Item(ItemType.WEAPON, "Sword of silver +1"),
+        new Item(ItemType.POTION, "Potion of rust"),
+        new Item(ItemType.POTION, "Potion of healing"),
+        new Item(ItemType.RING, "Ring of armor"),
+        new Item(ItemType.WEAPON, "Steel halberd"),
+        new Item(ItemType.WEAPON, "Dagger of poison"));
+  }
+
+  public Iterator<Item> iterator(ItemType itemType) {
+    return new TreasureChestItemIterator(this, itemType);
+  }
+
+  /**
+   * Get all items.
+   */
+  public List<Item> getItems() {
+    return new ArrayList<>(items);
+  }
+
 }

@@ -21,31 +21,16 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.iterator.list;
+package com.iluwatar.iterator.frame;
 
 /**
- * Item.
+ * Iterator interface to be implemented by iterators over various data structures.
+ *
+ * @param <T> generically typed for various objects
  */
-public class Item {
+public interface Iterator<T> {
 
-  private ItemType type;
-  private final String name;
+  boolean hasNext();
 
-  public Item(ItemType type, String name) {
-    this.setType(type);
-    this.name = name;
-  }
-
-  @Override
-  public String toString() {
-    return name;
-  }
-
-  public ItemType getType() {
-    return type;
-  }
-
-  public final void setType(ItemType type) {
-    this.type = type;
-  }
+  T next();
 }
