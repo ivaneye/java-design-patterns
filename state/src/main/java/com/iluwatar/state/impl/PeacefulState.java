@@ -21,45 +21,34 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.state;
+package com.iluwatar.state.impl;
 
+import com.iluwatar.state.Mammoth;
 import com.iluwatar.state.frame.State;
-import com.iluwatar.state.impl.AngryState;
-import com.iluwatar.state.impl.PeacefulState;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- * Mammoth has internal state that defines its behavior.
+ * Peaceful state.
  */
-public class Mammoth {
+public class PeacefulState implements State {
 
-  private State state;
+  private static final Logger LOGGER = LoggerFactory.getLogger(PeacefulState.class);
 
-  public Mammoth() {
-    state = new PeacefulState(this);
-  }
+  private final Mammoth mammoth;
 
-  /**
-   * Makes time pass for the mammoth.
-   */
-  public void timePasses() {
-    if (state.getClass().equals(PeacefulState.class)) {
-      changeStateTo(new AngryState(this));
-    } else {
-      changeStateTo(new PeacefulState(this));
-    }
-  }
-
-  private void changeStateTo(State newState) {
-    this.state = newState;
-    this.state.onEnterState();
+  public PeacefulState(Mammoth mammoth) {
+    this.mammoth = mammoth;
   }
 
   @Override
-  public String toString() {
-    return "The mammoth";
+  public void observe() {
+    LOGGER.info("{} is calm and peaceful.", mammoth);
   }
 
-  public void observe() {
-    this.state.observe();
+  @Override
+  public void onEnterState() {
+    LOGGER.info("{} calms down.", mammoth);
   }
+
 }

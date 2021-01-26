@@ -21,8 +21,10 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.state;
+package com.iluwatar.state.impl;
 
+import com.iluwatar.state.Mammoth;
+import com.iluwatar.state.frame.State;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
