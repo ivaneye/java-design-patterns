@@ -23,6 +23,8 @@
 
 package com.iluwatar.visitor;
 
+import com.iluwatar.visitor.impl.visitor.SergeantVisitor;
+
 import java.util.Optional;
 
 /**

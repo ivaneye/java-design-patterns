@@ -21,31 +21,34 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.visitor;
+package com.iluwatar.visitor.impl.visitor;
 
-import com.iluwatar.visitor.frame.UnitVisitor;
+import com.iluwatar.visitor.impl.unit.Commander;
+import com.iluwatar.visitor.impl.unit.Sergeant;
 import com.iluwatar.visitor.impl.unit.Soldier;
-
-import static org.mockito.Matchers.eq;
-import static org.mockito.Mockito.verify;
+import com.iluwatar.visitor.frame.UnitVisitor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- * Date: 12/30/15 - 19:45 PM.
- *
- * @author Jeroen Meulemeester
+ * CommanderVisitor.
  */
-public class SoldierTest extends UnitTest<Soldier> {
+public class CommanderVisitor implements UnitVisitor {
 
-  /**
-   * Create a new test instance for the given {@link Soldier}.
-   */
-  public SoldierTest() {
-    super(Soldier::new);
+  private static final Logger LOGGER = LoggerFactory.getLogger(CommanderVisitor.class);
+
+  @Override
+  public void visitSoldier(Soldier soldier) {
+    // Do nothing
   }
 
   @Override
-  void verifyVisit(Soldier unit, UnitVisitor mockedVisitor) {
-    verify(mockedVisitor).visitSoldier(eq(unit));
+  public void visitSergeant(Sergeant sergeant) {
+    // Do nothing
   }
 
+  @Override
+  public void visitCommander(Commander commander) {
+    LOGGER.info("Good to see you {}", commander);
+  }
 }

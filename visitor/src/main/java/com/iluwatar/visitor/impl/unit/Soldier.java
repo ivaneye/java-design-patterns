@@ -21,31 +21,28 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.visitor;
+package com.iluwatar.visitor.impl.unit;
 
+import com.iluwatar.visitor.frame.Unit;
 import com.iluwatar.visitor.frame.UnitVisitor;
-import com.iluwatar.visitor.impl.unit.Soldier;
-
-import static org.mockito.Matchers.eq;
-import static org.mockito.Mockito.verify;
 
 /**
- * Date: 12/30/15 - 19:45 PM.
- *
- * @author Jeroen Meulemeester
+ * Soldier.
  */
-public class SoldierTest extends UnitTest<Soldier> {
+public class Soldier extends Unit {
 
-  /**
-   * Create a new test instance for the given {@link Soldier}.
-   */
-  public SoldierTest() {
-    super(Soldier::new);
+  public Soldier(Unit... children) {
+    super(children);
   }
 
   @Override
-  void verifyVisit(Soldier unit, UnitVisitor mockedVisitor) {
-    verify(mockedVisitor).visitSoldier(eq(unit));
+  public void accept(UnitVisitor visitor) {
+    visitor.visitSoldier(this);
+    super.accept(visitor);
   }
 
+  @Override
+  public String toString() {
+    return "soldier";
+  }
 }

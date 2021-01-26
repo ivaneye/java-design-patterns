@@ -21,25 +21,34 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.visitor;
+package com.iluwatar.visitor.impl.visitor;
 
-import java.util.Arrays;
+import com.iluwatar.visitor.impl.unit.Commander;
+import com.iluwatar.visitor.impl.unit.Sergeant;
+import com.iluwatar.visitor.impl.unit.Soldier;
+import com.iluwatar.visitor.frame.UnitVisitor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- * Interface for the nodes in hierarchy.
+ * SergeantVisitor.
  */
-public abstract class Unit {
+public class SergeantVisitor implements UnitVisitor {
 
-  private final Unit[] children;
+  private static final Logger LOGGER = LoggerFactory.getLogger(SergeantVisitor.class);
 
-  public Unit(Unit... children) {
-    this.children = children;
+  @Override
+  public void visitSoldier(Soldier soldier) {
+    // Do nothing
   }
 
-  /**
-   * Accept visitor.
-   */
-  public void accept(UnitVisitor visitor) {
-    Arrays.stream(children).forEach(child -> child.accept(visitor));
+  @Override
+  public void visitSergeant(Sergeant sergeant) {
+    LOGGER.info("Hello {}", sergeant);
+  }
+
+  @Override
+  public void visitCommander(Commander commander) {
+    // Do nothing
   }
 }

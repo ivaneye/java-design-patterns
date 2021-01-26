@@ -30,6 +30,9 @@ import static org.mockito.Mockito.verifyNoMoreInteractions;
 
 import java.util.Arrays;
 import java.util.function.Function;
+
+import com.iluwatar.visitor.frame.Unit;
+import com.iluwatar.visitor.frame.UnitVisitor;
 import org.junit.jupiter.api.Test;
 
 /**

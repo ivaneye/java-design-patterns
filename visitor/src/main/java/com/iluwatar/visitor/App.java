@@ -23,6 +23,13 @@
 
 package com.iluwatar.visitor;
 
+import com.iluwatar.visitor.impl.unit.Commander;
+import com.iluwatar.visitor.impl.unit.Sergeant;
+import com.iluwatar.visitor.impl.unit.Soldier;
+import com.iluwatar.visitor.impl.visitor.CommanderVisitor;
+import com.iluwatar.visitor.impl.visitor.SergeantVisitor;
+import com.iluwatar.visitor.impl.visitor.SoldierVisitor;
+
 /**
  * <p>Visitor pattern defines mechanism to apply operations on nodes in hierarchy. New operations
  * can be added without altering the node interface.</p>

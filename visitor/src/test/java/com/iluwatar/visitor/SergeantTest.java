@@ -23,6 +23,9 @@
 
 package com.iluwatar.visitor;
 
+import com.iluwatar.visitor.frame.UnitVisitor;
+import com.iluwatar.visitor.impl.unit.Sergeant;
+
 import static org.mockito.Matchers.eq;
 import static org.mockito.Mockito.verify;
 
