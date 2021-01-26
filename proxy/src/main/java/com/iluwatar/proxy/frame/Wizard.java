@@ -21,20 +21,22 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.proxy;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+package com.iluwatar.proxy.frame;
 
 /**
- * The object to be proxied.
+ * Wizard.
  */
-public class IvoryTower implements WizardTower {
+public class Wizard {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(IvoryTower.class);
+  private final String name;
 
-  public void enter(Wizard wizard) {
-    LOGGER.info("{} enters the tower.", wizard);
+  public Wizard(String name) {
+    this.name = name;
+  }
+
+  @Override
+  public String toString() {
+    return name;
   }
 
 }

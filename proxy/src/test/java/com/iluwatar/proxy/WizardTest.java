@@ -26,6 +26,8 @@ package com.iluwatar.proxy;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.List;
+
+import com.iluwatar.proxy.frame.Wizard;
 import org.junit.jupiter.api.Test;
 
 /**

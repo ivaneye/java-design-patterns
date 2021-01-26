@@ -21,8 +21,10 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.proxy;
+package com.iluwatar.proxy.impl;
 
+import com.iluwatar.proxy.frame.Wizard;
+import com.iluwatar.proxy.frame.WizardTower;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

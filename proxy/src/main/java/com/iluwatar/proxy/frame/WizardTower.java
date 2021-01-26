@@ -21,22 +21,12 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.proxy;
+package com.iluwatar.proxy.frame;
 
 /**
- * Wizard.
+ * WizardTower interface.
  */
-public class Wizard {
+public interface WizardTower {
 
-  private final String name;
-
-  public Wizard(String name) {
-    this.name = name;
-  }
-
-  @Override
-  public String toString() {
-    return name;
-  }
-
+  void enter(Wizard wizard);
 }

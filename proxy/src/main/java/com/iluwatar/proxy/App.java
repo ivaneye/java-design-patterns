@@ -23,6 +23,10 @@
 
 package com.iluwatar.proxy;
 
+import com.iluwatar.proxy.frame.Wizard;
+import com.iluwatar.proxy.impl.IvoryTower;
+import com.iluwatar.proxy.impl.WizardTowerProxy;
+
 /**
  * A proxy, in its most general form, is a class functioning as an interface to something else. The
  * proxy could interface to anything: a network connection, a large object in memory, a file, or
