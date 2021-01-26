@@ -21,31 +21,51 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.prototype;
+package com.iluwatar.prototype.impl.orc;
+
+import com.iluwatar.prototype.frame.Mage;
 
 /**
- * Beast.
+ * OrcMage.
  */
-public abstract class Beast implements Prototype {
+public class OrcMage extends Mage {
 
-  public Beast() {
+  private final String weapon;
+
+  public OrcMage(String weapon) {
+    this.weapon = weapon;
   }
 
-  public Beast(Beast source) {
+  public OrcMage(OrcMage orcMage) {
+    super(orcMage);
+    this.weapon = orcMage.weapon;
   }
 
   @Override
-  public abstract Beast copy();
+  public OrcMage copy() {
+    return new OrcMage(this);
+  }
+
+  @Override
+  public String toString() {
+    return "Orcish mage attacks with " + weapon;
+  }
 
   @Override
   public boolean equals(Object obj) {
     if (this == obj) {
       return true;
     }
-    if (obj == null) {
+    if (!super.equals(obj)) {
       return false;
     }
-    return getClass() == obj.getClass();
+    if (getClass() != obj.getClass()) {
+      return false;
+    }
+    var other = (OrcMage) obj;
+    if (weapon == null) {
+      return other.weapon == null;
+    }
+    return weapon.equals(other.weapon);
   }
-
 }

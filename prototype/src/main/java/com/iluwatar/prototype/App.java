@@ -23,6 +23,13 @@
 
 package com.iluwatar.prototype;
 
+import com.iluwatar.prototype.impl.HeroFactoryImpl;
+import com.iluwatar.prototype.impl.elf.ElfBeast;
+import com.iluwatar.prototype.impl.elf.ElfMage;
+import com.iluwatar.prototype.impl.elf.ElfWarlord;
+import com.iluwatar.prototype.impl.orc.OrcBeast;
+import com.iluwatar.prototype.impl.orc.OrcMage;
+import com.iluwatar.prototype.impl.orc.OrcWarlord;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

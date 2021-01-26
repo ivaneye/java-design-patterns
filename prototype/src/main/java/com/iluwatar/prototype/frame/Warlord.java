@@ -21,49 +21,31 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.prototype;
+package com.iluwatar.prototype.frame;
 
 /**
- * OrcMage.
+ * Warlord.
  */
-public class OrcMage extends Mage {
+public abstract class Warlord implements Prototype {
 
-  private final String weapon;
-
-  public OrcMage(String weapon) {
-    this.weapon = weapon;
+  public Warlord() {
   }
 
-  public OrcMage(OrcMage orcMage) {
-    super(orcMage);
-    this.weapon = orcMage.weapon;
+  public Warlord(Warlord source) {
   }
 
   @Override
-  public OrcMage copy() {
-    return new OrcMage(this);
-  }
-
-  @Override
-  public String toString() {
-    return "Orcish mage attacks with " + weapon;
-  }
+  public abstract Warlord copy();
 
   @Override
   public boolean equals(Object obj) {
     if (this == obj) {
       return true;
     }
-    if (!super.equals(obj)) {
+    if (obj == null) {
       return false;
     }
-    if (getClass() != obj.getClass()) {
-      return false;
-    }
-    var other = (OrcMage) obj;
-    if (weapon == null) {
-      return other.weapon == null;
-    }
-    return weapon.equals(other.weapon);
+    return getClass() == obj.getClass();
   }
+
 }

@@ -21,21 +21,21 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.prototype;
+package com.iluwatar.prototype.frame;
 
 /**
- * Mage.
+ * Beast.
  */
-public abstract class Mage implements Prototype {
+public abstract class Beast implements Prototype {
 
-  public Mage() {
+  public Beast() {
   }
 
-  public Mage(Mage source) {
+  public Beast(Beast source) {
   }
 
   @Override
-  public abstract Mage copy();
+  public abstract Beast copy();
 
   @Override
   public boolean equals(Object obj) {

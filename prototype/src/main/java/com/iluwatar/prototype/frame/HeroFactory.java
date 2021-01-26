@@ -21,31 +21,17 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.prototype;
+package com.iluwatar.prototype.frame;
 
 /**
- * Warlord.
+ * Interface for the factory class.
  */
-public abstract class Warlord implements Prototype {
+public interface HeroFactory {
 
-  public Warlord() {
-  }
+  Mage createMage();
 
-  public Warlord(Warlord source) {
-  }
+  Warlord createWarlord();
 
-  @Override
-  public abstract Warlord copy();
-
-  @Override
-  public boolean equals(Object obj) {
-    if (this == obj) {
-      return true;
-    }
-    if (obj == null) {
-      return false;
-    }
-    return getClass() == obj.getClass();
-  }
+  Beast createBeast();
 
 }

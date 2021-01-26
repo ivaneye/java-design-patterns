@@ -21,32 +21,34 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.prototype;
+package com.iluwatar.prototype.impl.elf;
+
+import com.iluwatar.prototype.frame.Beast;
 
 /**
- * ElfWarlord.
+ * ElfBeast.
  */
-public class ElfWarlord extends Warlord {
+public class ElfBeast extends Beast {
 
   private final String helpType;
 
-  public ElfWarlord(String helpType) {
+  public ElfBeast(String helpType) {
     this.helpType = helpType;
   }
 
-  public ElfWarlord(ElfWarlord elfWarlord) {
-    super(elfWarlord);
-    this.helpType = elfWarlord.helpType;
+  public ElfBeast(ElfBeast elfBeast) {
+    super(elfBeast);
+    this.helpType = elfBeast.helpType;
   }
 
   @Override
-  public ElfWarlord copy() {
-    return new ElfWarlord(this);
+  public ElfBeast copy() {
+    return new ElfBeast(this);
   }
 
   @Override
   public String toString() {
-    return "Elven warlord helps in " + helpType;
+    return "Elven eagle helps in " + helpType;
   }
 
   @Override
@@ -60,10 +62,11 @@ public class ElfWarlord extends Warlord {
     if (getClass() != obj.getClass()) {
       return false;
     }
-    var other = (ElfWarlord) obj;
+    var other = (ElfBeast) obj;
     if (helpType == null) {
       return other.helpType == null;
     }
     return helpType.equals(other.helpType);
   }
+
 }

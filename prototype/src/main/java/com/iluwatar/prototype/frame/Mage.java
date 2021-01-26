@@ -21,13 +21,31 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.prototype;
+package com.iluwatar.prototype.frame;
 
 /**
- * Prototype.
+ * Mage.
  */
-public interface Prototype {
+public abstract class Mage implements Prototype {
 
-  Object copy();
+  public Mage() {
+  }
+
+  public Mage(Mage source) {
+  }
+
+  @Override
+  public abstract Mage copy();
+
+  @Override
+  public boolean equals(Object obj) {
+    if (this == obj) {
+      return true;
+    }
+    if (obj == null) {
+      return false;
+    }
+    return getClass() == obj.getClass();
+  }
 
 }

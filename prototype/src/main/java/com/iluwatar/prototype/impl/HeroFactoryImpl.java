@@ -21,49 +21,50 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.prototype;
+package com.iluwatar.prototype.impl;
+
+import com.iluwatar.prototype.frame.Beast;
+import com.iluwatar.prototype.frame.HeroFactory;
+import com.iluwatar.prototype.frame.Mage;
+import com.iluwatar.prototype.frame.Warlord;
 
 /**
- * ElfMage.
+ * Concrete factory class.
  */
-public class ElfMage extends Mage {
+public class HeroFactoryImpl implements HeroFactory {
 
-  private final String helpType;
+  private final Mage mage;
+  private final Warlord warlord;
+  private final Beast beast;
 
-  public ElfMage(String helpType) {
-    this.helpType = helpType;
+  /**
+   * Constructor.
+   */
+  public HeroFactoryImpl(Mage mage, Warlord warlord, Beast beast) {
+    this.mage = mage;
+    this.warlord = warlord;
+    this.beast = beast;
   }
 
-  public ElfMage(ElfMage elfMage) {
-    super(elfMage);
-    this.helpType = elfMage.helpType;
+  /**
+   * Create mage.
+   */
+  public Mage createMage() {
+    return mage.copy();
   }
 
-  @Override
-  public ElfMage copy() {
-    return new ElfMage(this);
+  /**
+   * Create warlord.
+   */
+  public Warlord createWarlord() {
+    return warlord.copy();
   }
 
-  @Override
-  public String toString() {
-    return "Elven mage helps in " + helpType;
+  /**
+   * Create beast.
+   */
+  public Beast createBeast() {
+    return beast.copy();
   }
 
-  @Override
-  public boolean equals(Object obj) {
-    if (this == obj) {
-      return true;
-    }
-    if (!super.equals(obj)) {
-      return false;
-    }
-    if (getClass() != obj.getClass()) {
-      return false;
-    }
-    var other = (ElfMage) obj;
-    if (helpType == null) {
-      return other.helpType == null;
-    }
-    return helpType.equals(other.helpType);
-  }
 }

@@ -30,6 +30,14 @@ import static org.junit.jupiter.api.Assertions.assertSame;
 
 import java.util.Collection;
 import java.util.List;
+
+import com.iluwatar.prototype.frame.Prototype;
+import com.iluwatar.prototype.impl.elf.ElfBeast;
+import com.iluwatar.prototype.impl.elf.ElfMage;
+import com.iluwatar.prototype.impl.elf.ElfWarlord;
+import com.iluwatar.prototype.impl.orc.OrcBeast;
+import com.iluwatar.prototype.impl.orc.OrcMage;
+import com.iluwatar.prototype.impl.orc.OrcWarlord;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
 
