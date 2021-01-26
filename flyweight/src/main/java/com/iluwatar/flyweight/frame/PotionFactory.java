@@ -21,20 +21,24 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.flyweight;
+package com.iluwatar.flyweight.frame;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import java.util.EnumMap;
+import java.util.Map;
 
 /**
- * PoisonPotion.
+ * 工厂方法+flyweight
+ * PotionFactory is the Flyweight in this example. It minimizes memory use by sharing object
+ * instances. It holds a map of potion instances and new potions are created only when none of the
+ * type already exists.
  */
-public class PoisonPotion implements Potion {
+public abstract class PotionFactory {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(PoisonPotion.class);
+  private final Map<PotionType, Potion> potions;
 
-  @Override
-  public void drink() {
-    LOGGER.info("Urgh! This is poisonous. (Potion={})", System.identityHashCode(this));
+  public PotionFactory() {
+    potions = new EnumMap<>(PotionType.class);
   }
+
+  public abstract Potion createPotion(PotionType type);
 }

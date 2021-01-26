@@ -24,6 +24,11 @@
 package com.iluwatar.flyweight;
 
 import java.util.List;
+
+import com.iluwatar.flyweight.frame.Potion;
+import com.iluwatar.flyweight.frame.PotionFactory;
+import com.iluwatar.flyweight.frame.PotionType;
+import com.iluwatar.flyweight.impl.PotionFactoryImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -41,7 +46,7 @@ public class AlchemistShop {
    * Constructor.
    */
   public AlchemistShop() {
-    var factory = new PotionFactory();
+    var factory = new PotionFactoryImpl();
     topShelf = List.of(
         factory.createPotion(PotionType.INVISIBILITY),
         factory.createPotion(PotionType.INVISIBILITY),

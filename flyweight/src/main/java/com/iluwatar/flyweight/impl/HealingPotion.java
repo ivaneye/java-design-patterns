@@ -21,31 +21,21 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.flyweight;
+package com.iluwatar.flyweight.impl;
 
-import com.iluwatar.flyweight.frame.PotionFactory;
+import com.iluwatar.flyweight.frame.Potion;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- * Flyweight pattern is useful when the program needs a huge amount of objects. It provides means to
- * decrease resource usage by sharing object instances.
- *
- * <p>In this example {@link AlchemistShop} has great amount of potions on its shelves. To fill the
- * shelves {@link AlchemistShop} uses {@link PotionFactory} (which represents the Flyweight in this
- * example). Internally {@link PotionFactory} holds a map of the potions and lazily creates new ones
- * when requested.
- *
- * <p>To enable safe sharing, between clients and threads, Flyweight objects must be immutable.
- * Flyweight objects are by definition value objects.
+ * HealingPotion.
  */
-public class App {
+public class HealingPotion implements Potion {
 
-  /**
-   * Program entry point.
-   *
-   * @param args command line args
-   */
-  public static void main(String[] args) {
-    var alchemistShop = new AlchemistShop();
-    alchemistShop.enumerate();
+  private static final Logger LOGGER = LoggerFactory.getLogger(HealingPotion.class);
+
+  @Override
+  public void drink() {
+    LOGGER.info("You feel healed. (Potion={})", System.identityHashCode(this));
   }
 }

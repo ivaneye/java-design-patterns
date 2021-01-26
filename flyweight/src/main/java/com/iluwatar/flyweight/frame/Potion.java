@@ -21,20 +21,12 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.flyweight;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+package com.iluwatar.flyweight.frame;
 
 /**
- * InvisibilityPotion.
+ * Interface for Potions.
  */
-public class InvisibilityPotion implements Potion {
+public interface Potion {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(InvisibilityPotion.class);
-
-  @Override
-  public void drink() {
-    LOGGER.info("You become invisible. (Potion={})", System.identityHashCode(this));
-  }
+  void drink();
 }

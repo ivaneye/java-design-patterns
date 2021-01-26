@@ -27,6 +27,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import java.util.ArrayList;
+
+import com.iluwatar.flyweight.frame.Potion;
 import org.junit.jupiter.api.Test;
 
 /**
