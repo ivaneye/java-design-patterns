@@ -21,34 +21,23 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.composite;
+package com.iluwatar.composite.impl;
 
-import java.util.List;
+import com.iluwatar.composite.frame.LetterComposite;
 
 /**
- * Word.
+ * Letter.
  */
-public class Word extends LetterComposite {
+public class Letter extends LetterComposite {
 
-  /**
-   * Constructor.
-   */
-  public Word(List<Letter> letters) {
-    letters.forEach(this::add);
-  }
+  private final char character;
 
-  /**
-   * Constructor.
-   * @param letters to include
-   */
-  public Word(char... letters) {
-    for (char letter : letters) {
-      this.add(new Letter(letter));
-    }
+  public Letter(char c) {
+    this.character = c;
   }
 
   @Override
   protected void printThisBefore() {
-    System.out.print(" ");
+    System.out.print(character);
   }
 }

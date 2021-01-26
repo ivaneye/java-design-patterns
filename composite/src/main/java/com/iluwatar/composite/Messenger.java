@@ -23,6 +23,10 @@
 
 package com.iluwatar.composite;
 
+import com.iluwatar.composite.frame.LetterComposite;
+import com.iluwatar.composite.impl.Sentence;
+import com.iluwatar.composite.impl.Word;
+
 import java.util.List;
 
 /**

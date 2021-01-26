@@ -21,38 +21,26 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.composite;
+package com.iluwatar.composite.impl;
 
-import java.util.ArrayList;
+import com.iluwatar.composite.frame.LetterComposite;
+
 import java.util.List;
 
 /**
- * Composite interface.
+ * Sentence.
  */
-public abstract class LetterComposite {
-
-  private final List<LetterComposite> children = new ArrayList<>();
-
-  public void add(LetterComposite letter) {
-    children.add(letter);
-  }
-
-  public int count() {
-    return children.size();
-  }
-
-  protected void printThisBefore() {
-  }
-
-  protected void printThisAfter() {
-  }
+public class Sentence extends LetterComposite {
 
   /**
-   * Print.
+   * Constructor.
    */
-  public void print() {
-    printThisBefore();
-    children.forEach(LetterComposite::print);
-    printThisAfter();
+  public Sentence(List<Word> words) {
+    words.forEach(this::add);
+  }
+
+  @Override
+  protected void printThisAfter() {
+    System.out.print(".");
   }
 }

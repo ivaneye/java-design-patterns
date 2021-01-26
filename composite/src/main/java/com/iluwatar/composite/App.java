@@ -23,6 +23,7 @@
 
 package com.iluwatar.composite;
 
+import com.iluwatar.composite.frame.LetterComposite;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

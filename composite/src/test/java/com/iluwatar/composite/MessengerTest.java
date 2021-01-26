@@ -23,6 +23,7 @@
 
 package com.iluwatar.composite;
 
+import com.iluwatar.composite.frame.LetterComposite;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
