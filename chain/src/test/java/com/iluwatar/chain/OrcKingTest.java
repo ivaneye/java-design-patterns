@@ -26,6 +26,9 @@ package com.iluwatar.chain;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import java.util.List;
+
+import com.iluwatar.chain.frame.Request;
+import com.iluwatar.chain.frame.RequestType;
 import org.junit.jupiter.api.Test;
 
 /**

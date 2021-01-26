@@ -21,20 +21,24 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.chain;
+package com.iluwatar.chain.impl;
+
+import com.iluwatar.chain.frame.Request;
+import com.iluwatar.chain.frame.RequestHandler;
+import com.iluwatar.chain.frame.RequestType;
 
 /**
- * OrcOfficer.
+ * OrcCommander.
  */
-public class OrcOfficer extends RequestHandler {
+public class OrcCommander extends RequestHandler {
 
-  public OrcOfficer(RequestHandler handler) {
+  public OrcCommander(RequestHandler handler) {
     super(handler);
   }
 
   @Override
   public void handleRequest(Request req) {
-    if (RequestType.TORTURE_PRISONER == req.getRequestType()) {
+    if (RequestType.DEFEND_CASTLE == req.getRequestType()) {
       printHandling(req);
       req.markHandled();
     } else {
@@ -44,7 +48,6 @@ public class OrcOfficer extends RequestHandler {
 
   @Override
   public String toString() {
-    return "Orc officer";
+    return "Orc commander";
   }
-
 }

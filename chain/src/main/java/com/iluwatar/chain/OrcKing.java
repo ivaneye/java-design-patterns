@@ -23,6 +23,12 @@
 
 package com.iluwatar.chain;
 
+import com.iluwatar.chain.frame.Request;
+import com.iluwatar.chain.frame.RequestHandler;
+import com.iluwatar.chain.impl.OrcCommander;
+import com.iluwatar.chain.impl.OrcOfficer;
+import com.iluwatar.chain.impl.OrcSoldier;
+
 /**
  * OrcKing makes requests that are handled by the chain.
  */

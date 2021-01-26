@@ -21,7 +21,7 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.chain;
+package com.iluwatar.chain.frame;
 
 import java.util.Objects;
 

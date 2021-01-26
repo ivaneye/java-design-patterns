@@ -21,29 +21,13 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.chain;
+package com.iluwatar.chain.frame;
 
 /**
- * OrcCommander.
+ * RequestType enumeration.
  */
-public class OrcCommander extends RequestHandler {
+public enum RequestType {
 
-  public OrcCommander(RequestHandler handler) {
-    super(handler);
-  }
+  DEFEND_CASTLE, TORTURE_PRISONER, COLLECT_TAX
 
-  @Override
-  public void handleRequest(Request req) {
-    if (RequestType.DEFEND_CASTLE == req.getRequestType()) {
-      printHandling(req);
-      req.markHandled();
-    } else {
-      super.handleRequest(req);
-    }
-  }
-
-  @Override
-  public String toString() {
-    return "Orc commander";
-  }
 }
