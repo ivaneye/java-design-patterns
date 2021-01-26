@@ -21,7 +21,9 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.builder;
+package com.iluwatar.builder.whole;
+
+import com.iluwatar.builder.part.*;
 
 /**
  * Hero, the class with many parameters.

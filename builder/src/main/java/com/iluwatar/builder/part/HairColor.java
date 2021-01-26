@@ -21,17 +21,18 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.builder;
+package com.iluwatar.builder.part;
 
 /**
- * Profession enumeration.
+ * HairColor enumeration.
  */
-public enum Profession {
+public enum HairColor {
 
-  WARRIOR, THIEF, MAGE, PRIEST;
+  WHITE, BLOND, RED, BROWN, BLACK;
 
   @Override
   public String toString() {
     return name().toLowerCase();
   }
+
 }

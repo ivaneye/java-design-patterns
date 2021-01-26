@@ -21,18 +21,24 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.builder;
+package com.iluwatar.builder.part;
 
 /**
- * HairColor enumeration.
+ * HairType enumeration.
  */
-public enum HairColor {
+public enum HairType {
 
-  WHITE, BLOND, RED, BROWN, BLACK;
+  BALD("bald"), SHORT("short"), CURLY("curly"), LONG_STRAIGHT("long straight"), LONG_CURLY(
+      "long curly");
+
+  private final String title;
+
+  HairType(String title) {
+    this.title = title;
+  }
 
   @Override
   public String toString() {
-    return name().toLowerCase();
+    return title;
   }
-
 }

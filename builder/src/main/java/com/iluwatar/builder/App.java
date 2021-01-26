@@ -23,7 +23,9 @@
 
 package com.iluwatar.builder;
 
-import com.iluwatar.builder.Hero.Builder;
+import com.iluwatar.builder.whole.Hero;
+import com.iluwatar.builder.whole.Hero.Builder;
+import com.iluwatar.builder.part.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -21,24 +21,17 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.builder;
+package com.iluwatar.builder.part;
 
 /**
- * HairType enumeration.
+ * Weapon enumeration.
  */
-public enum HairType {
+public enum Weapon {
 
-  BALD("bald"), SHORT("short"), CURLY("curly"), LONG_STRAIGHT("long straight"), LONG_CURLY(
-      "long curly");
-
-  private final String title;
-
-  HairType(String title) {
-    this.title = title;
-  }
+  DAGGER, SWORD, AXE, WARHAMMER, BOW;
 
   @Override
   public String toString() {
-    return title;
+    return name().toLowerCase();
   }
 }

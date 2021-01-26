@@ -21,7 +21,7 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.builder;
+package com.iluwatar.builder.part;
 
 /**
  * Armor enumeration.

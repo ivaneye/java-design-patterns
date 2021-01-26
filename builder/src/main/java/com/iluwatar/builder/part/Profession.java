@@ -21,14 +21,14 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.builder;
+package com.iluwatar.builder.part;
 
 /**
- * Weapon enumeration.
+ * Profession enumeration.
  */
-public enum Weapon {
+public enum Profession {
 
-  DAGGER, SWORD, AXE, WARHAMMER, BOW;
+  WARRIOR, THIEF, MAGE, PRIEST;
 
   @Override
   public String toString() {

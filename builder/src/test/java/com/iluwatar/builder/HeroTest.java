@@ -27,6 +27,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+import com.iluwatar.builder.whole.Hero;
+import com.iluwatar.builder.part.*;
 import org.junit.jupiter.api.Test;
 
 /**
