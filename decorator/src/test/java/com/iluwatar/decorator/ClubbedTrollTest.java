@@ -29,6 +29,8 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.verifyNoMoreInteractions;
 import static org.mockito.internal.verification.VerificationModeFactory.times;
 
+import com.iluwatar.decorator.impl.ClubbedTroll;
+import com.iluwatar.decorator.impl.SimpleTroll;
 import org.junit.jupiter.api.Test;
 
 /**

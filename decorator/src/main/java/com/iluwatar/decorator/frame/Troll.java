@@ -21,37 +21,17 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.decorator;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+package com.iluwatar.decorator.frame;
 
 /**
- * Decorator that adds a club for the troll.
+ * Interface for trolls.
  */
-public class ClubbedTroll implements Troll {
+public interface Troll {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(ClubbedTroll.class);
+  void attack();
 
-  private final Troll decorated;
+  int getAttackPower();
 
-  public ClubbedTroll(Troll decorated) {
-    this.decorated = decorated;
-  }
+  void fleeBattle();
 
-  @Override
-  public void attack() {
-    decorated.attack();
-    LOGGER.info("The troll swings at you with a club!");
-  }
-
-  @Override
-  public int getAttackPower() {
-    return decorated.getAttackPower() + 10;
-  }
-
-  @Override
-  public void fleeBattle() {
-    decorated.fleeBattle();
-  }
 }

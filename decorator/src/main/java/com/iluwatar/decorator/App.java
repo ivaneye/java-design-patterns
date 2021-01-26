@@ -23,6 +23,8 @@
 
 package com.iluwatar.decorator;
 
+import com.iluwatar.decorator.impl.ClubbedTroll;
+import com.iluwatar.decorator.impl.SimpleTroll;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -21,30 +21,38 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.decorator;
+package com.iluwatar.decorator.impl;
 
+import com.iluwatar.decorator.frame.Troll;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 /**
- * SimpleTroll implements {@link Troll} interface directly.
+ * Decorator that adds a club for the troll.
  */
-public class SimpleTroll implements Troll {
+public class ClubbedTroll implements Troll {
 
-  private static final Logger LOGGER = LoggerFactory.getLogger(SimpleTroll.class);
+  private static final Logger LOGGER = LoggerFactory.getLogger(ClubbedTroll.class);
+
+  private final Troll decorated;
+
+  public ClubbedTroll(Troll decorated) {
+    this.decorated = decorated;
+  }
 
   @Override
   public void attack() {
-    LOGGER.info("The troll tries to grab you!");
+    decorated.attack();
+    LOGGER.info("The troll swings at you with a club!");
   }
 
   @Override
   public int getAttackPower() {
-    return 10;
+    return decorated.getAttackPower() + 10;
   }
 
   @Override
   public void fleeBattle() {
-    LOGGER.info("The troll shrieks in horror and runs away!");
+    decorated.fleeBattle();
   }
 }
