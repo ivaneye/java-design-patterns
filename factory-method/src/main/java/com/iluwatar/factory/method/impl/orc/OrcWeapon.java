@@ -21,27 +21,29 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.factory.method;
+package com.iluwatar.factory.method.impl.orc;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import com.iluwatar.factory.method.frame.WeaponType;
+import com.iluwatar.factory.method.frame.Weapon;
 
 /**
- * Concrete subclass for creating new objects.
+ * OrcWeapon.
  */
-public class ElfBlacksmith implements Blacksmith {
+public class OrcWeapon implements Weapon {
 
-  private static final Map<WeaponType, ElfWeapon> ELFARSENAL;
+  private final WeaponType weaponType;
 
-  static {
-    ELFARSENAL = new HashMap<>(WeaponType.values().length);
-    Arrays.stream(WeaponType.values()).forEach(type -> ELFARSENAL.put(type, new ElfWeapon(type)));
+  public OrcWeapon(WeaponType weaponType) {
+    this.weaponType = weaponType;
   }
 
   @Override
-  public Weapon manufactureWeapon(WeaponType weaponType) {
-    return ELFARSENAL.get(weaponType);
+  public String toString() {
+    return "Orcish " + weaponType;
   }
 
+  @Override
+  public WeaponType getWeaponType() {
+    return weaponType;
+  }
 }

@@ -21,26 +21,13 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.factory.method;
+package com.iluwatar.factory.method.frame;
 
 /**
- * OrcWeapon.
+ * Weapon interface.
  */
-public class OrcWeapon implements Weapon {
+public interface Weapon {
 
-  private final WeaponType weaponType;
+  WeaponType getWeaponType();
 
-  public OrcWeapon(WeaponType weaponType) {
-    this.weaponType = weaponType;
-  }
-
-  @Override
-  public String toString() {
-    return "Orcish " + weaponType;
-  }
-
-  @Override
-  public WeaponType getWeaponType() {
-    return weaponType;
-  }
 }

@@ -23,6 +23,10 @@
 
 package com.iluwatar.factory.method;
 
+import com.iluwatar.factory.method.frame.Blacksmith;
+import com.iluwatar.factory.method.frame.WeaponType;
+import com.iluwatar.factory.method.impl.elf.ElfBlacksmith;
+import com.iluwatar.factory.method.impl.orc.OrcBlacksmith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -21,26 +21,13 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.factory.method;
+package com.iluwatar.factory.method.frame;
 
 /**
- * ElfWeapon.
+ * The interface containing method for producing objects.
  */
-public class ElfWeapon implements Weapon {
+public interface Blacksmith {
 
-  private final WeaponType weaponType;
+  Weapon manufactureWeapon(WeaponType weaponType);
 
-  public ElfWeapon(WeaponType weaponType) {
-    this.weaponType = weaponType;
-  }
-
-  @Override
-  public String toString() {
-    return "Elven " + weaponType;
-  }
-
-  @Override
-  public WeaponType getWeaponType() {
-    return weaponType;
-  }
 }

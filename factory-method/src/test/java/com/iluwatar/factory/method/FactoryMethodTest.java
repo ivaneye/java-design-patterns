@@ -26,6 +26,12 @@ package com.iluwatar.factory.method;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import com.iluwatar.factory.method.frame.Weapon;
+import com.iluwatar.factory.method.frame.WeaponType;
+import com.iluwatar.factory.method.impl.elf.ElfBlacksmith;
+import com.iluwatar.factory.method.impl.elf.ElfWeapon;
+import com.iluwatar.factory.method.impl.orc.OrcBlacksmith;
+import com.iluwatar.factory.method.impl.orc.OrcWeapon;
 import org.junit.jupiter.api.Test;
 
 /**

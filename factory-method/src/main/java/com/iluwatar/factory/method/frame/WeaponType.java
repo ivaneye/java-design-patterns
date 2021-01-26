@@ -21,26 +21,23 @@
  * THE SOFTWARE.
  */
 
-package com.iluwatar.factory.method;
-
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+package com.iluwatar.factory.method.frame;
 
 /**
- * Concrete subclass for creating new objects.
+ * WeaponType enumeration.
  */
-public class OrcBlacksmith implements Blacksmith {
+public enum WeaponType {
 
-  private static final Map<WeaponType, OrcWeapon> ORCARSENAL;
+  SHORT_SWORD("short sword"), SPEAR("spear"), AXE("axe"), UNDEFINED("");
 
-  static {
-    ORCARSENAL = new HashMap<>(WeaponType.values().length);
-    Arrays.stream(WeaponType.values()).forEach(type -> ORCARSENAL.put(type, new OrcWeapon(type)));
+  private final String title;
+
+  WeaponType(String title) {
+    this.title = title;
   }
-  
+
   @Override
-  public Weapon manufactureWeapon(WeaponType weaponType) {
-    return ORCARSENAL.get(weaponType);
+  public String toString() {
+    return title;
   }
 }
