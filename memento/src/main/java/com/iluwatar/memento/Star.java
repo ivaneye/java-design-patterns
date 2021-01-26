@@ -23,6 +23,10 @@
 
 package com.iluwatar.memento;
 
+import com.iluwatar.memento.frame.StarMemento;
+import com.iluwatar.memento.impl.StarMementoImpl;
+import com.iluwatar.memento.impl.StarType;
+
 /**
  * Star uses "mementos" to store and restore state.
  */
@@ -70,7 +74,7 @@ public class Star {
   }
 
   StarMemento getMemento() {
-    var state = new StarMementoInternal();
+    var state = new StarMementoImpl();
     state.setAgeYears(ageYears);
     state.setMassTons(massTons);
     state.setType(type);
@@ -78,7 +82,7 @@ public class Star {
   }
 
   void setMemento(StarMemento memento) {
-    var state = (StarMementoInternal) memento;
+    var state = (StarMementoImpl) memento;
     this.type = state.getType();
     this.ageYears = state.getAgeYears();
     this.massTons = state.getMassTons();
@@ -87,39 +91,5 @@ public class Star {
   @Override
   public String toString() {
     return String.format("%s age: %d years mass: %d tons", type.toString(), ageYears, massTons);
-  }
-
-  /**
-   * StarMemento implementation.
-   */
-  private static class StarMementoInternal implements StarMemento {
-
-    private StarType type;
-    private int ageYears;
-    private int massTons;
-
-    public StarType getType() {
-      return type;
-    }
-
-    public void setType(StarType type) {
-      this.type = type;
-    }
-
-    public int getAgeYears() {
-      return ageYears;
-    }
-
-    public void setAgeYears(int ageYears) {
-      this.ageYears = ageYears;
-    }
-
-    public int getMassTons() {
-      return massTons;
-    }
-
-    public void setMassTons(int massTons) {
-      this.massTons = massTons;
-    }
   }
 }

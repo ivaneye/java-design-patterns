@@ -24,6 +24,9 @@
 package com.iluwatar.memento;
 
 import java.util.Stack;
+
+import com.iluwatar.memento.frame.StarMemento;
+import com.iluwatar.memento.impl.StarType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

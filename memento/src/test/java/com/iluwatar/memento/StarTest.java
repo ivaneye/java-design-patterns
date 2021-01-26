@@ -25,6 +25,7 @@ package com.iluwatar.memento;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
+import com.iluwatar.memento.impl.StarType;
 import org.junit.jupiter.api.Test;
 
 /**
