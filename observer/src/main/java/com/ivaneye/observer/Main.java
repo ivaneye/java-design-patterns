@@ -11,10 +11,10 @@ public class Main {
         Consumer consumer = new Consumer();
         // 消费端订阅（监听）
         reg.subscribe(consumer);
-        // 生成端注册
+        // 生产端注册
         Provider providerA = new ProviderA();
         reg.regist(providerA);
-        // 生成端注册
+        // 生产端注册
         Provider providerB = new ProviderB();
         reg.regist(providerB);
     }
