@@ -24,9 +24,6 @@
 package com.iluwatar.observer;
 
 import com.iluwatar.observer.frame.Weather;
-import com.iluwatar.observer.generic.GHobbits;
-import com.iluwatar.observer.generic.GOrcs;
-import com.iluwatar.observer.generic.GWeather;
 import com.iluwatar.observer.impl.Hobbits;
 import com.iluwatar.observer.impl.Orcs;
 import org.slf4j.Logger;
@@ -62,16 +59,5 @@ public class App {
     weather.timePasses();
     weather.timePasses();
     weather.timePasses();
-
-    // Generic observer inspired by Java Generics and Collection by Naftalin & Wadler
-    LOGGER.info("--Running generic version--");
-    var genericWeather = new GWeather();
-    genericWeather.addObserver(new GOrcs());
-    genericWeather.addObserver(new GHobbits());
-
-    genericWeather.timePasses();
-    genericWeather.timePasses();
-    genericWeather.timePasses();
-    genericWeather.timePasses();
   }
 }
